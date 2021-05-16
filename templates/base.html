@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title> Musicloud</title>
 </head>
 <body>
-$END$
+<Header> Musicloud </Header>
+    <nav>
+        {% block nav %}
+        <ul>
+            <p><a href="{% url 'home' %} ">Home</a> </p>
+        </ul>
+        {% endblock %}
+    </nav>
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
 </body>
 </html>

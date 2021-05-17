@@ -7,7 +7,5 @@
 {% block search %}{% include 'disks/search_form.html' %}{% endblock %}
 
 {% block content %}
-    {% for album in albums %}
-       <p><a href="{% url 'album' album.id %}">{{ album.title}}</a> by {{ album.artist }} </p>
-    {% endfor %}
+     {% include 'disks/album_tab.html' %}
 {%  endblock %}

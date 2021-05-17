@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% load disks_extras %}
+
 {% block title %}{{ album.title }}{% endblock %}
+
 {% block search %}{% include 'disks/search_form.html' %}{% endblock %}
-{% block top %}<h1>{{ album.title }} by {{ album.artist }}</h1>{% endblock %}
+
+{% block top %}{{ album.title }} by {{ album.artist }}{% endblock %}
+
 {% block content %}
-    <table>
+    <table class="table table-stripped">
     <thead>
         <tr>
             <td>Name</td>
@@ -20,12 +24,10 @@
                 <td>{{track.name}}</td>
                 <td>{{track.milliseconds|duration}}</td>
                 <td>{{ track.bytes }}</td>
-                <td>{{ track.unitPrice }}</td>
+                <td>{{ track.unitPrice }} $</td>
                 <td>{{ track.composer }}</td>
             </tr>
         {% endfor %}
     </tbody>
     </table>
-
-
 {% endblock %}

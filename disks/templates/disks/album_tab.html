@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table class="table table-stripped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Artist</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for album in albums %}
+            <tr>
+                <td><a href="{% url 'album' album.id %}">{{ album.title}}</a></td>
+                <td>{{album.artist}}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>

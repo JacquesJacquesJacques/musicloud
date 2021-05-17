@@ -106,5 +106,13 @@ fabric.properties
 
 # Data Base
 chinook.db
+venv/
+
+.idea/
+
+*.pyc
+sqlite-dll-win64-x64-3310100,
+*.log
+
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm

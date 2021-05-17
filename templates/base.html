@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title> {% block title %}Musicloud {% endblock %}</title>
 </head>
 <body>
-$END$
+<Header> <h1>Musicloud</h1></Header>
+    <nav>
+        {% block nav %}
+        <ul>
+            <p><a href="{% url 'home' %} ">Home</a> </p>
+        </ul>
+        {% endblock %}
+        {% block search %}{% endblock %}
+    </nav>
+    <section id="content">
+        <h2>{% block top %}{% endblock %}</h2>
+        {% block content %}{% endblock %}
+    </section>
 </body>
 </html>
